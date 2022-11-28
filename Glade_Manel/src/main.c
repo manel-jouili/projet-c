@@ -15,18 +15,8 @@
 int
 main (int argc, char *argv[])
 {
-  GtkWidget *LOGIN_electeur;
+
   GtkWidget *GESTION;
-  GtkWidget *GESTION_LISTE;
-  GtkWidget *GESTION_USER;
-  GtkWidget *GESTION_OBSERV;
-  GtkWidget *GESTION_ELECTION;
-  GtkWidget *GESTION_BV;
-  GtkWidget *MODIF_LISTE;
-  GtkWidget *MODIF_USER;
-  GtkWidget *MODIF_OBSERV;
-  GtkWidget *MODIF_ELECTION;
-  GtkWidget *MODIFER_BV;
 
 #ifdef ENABLE_NLS
   bindtextdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR);
@@ -44,31 +34,10 @@ main (int argc, char *argv[])
    * (except popup menus), just so that you see something after building
    * the project. Delete any components that you don't want shown initially.
    */
-  LOGIN_electeur = create_LOGIN_electeur ();
-  gtk_widget_show (LOGIN_electeur);
+  
   GESTION = create_GESTION ();
   gtk_widget_show (GESTION);
-  GESTION_LISTE = create_GESTION_LISTE ();
-  gtk_widget_show (GESTION_LISTE);
-  GESTION_USER = create_GESTION_USER ();
-  gtk_widget_show (GESTION_USER);
-  GESTION_OBSERV = create_GESTION_OBSERV ();
-  gtk_widget_show (GESTION_OBSERV);
-  GESTION_ELECTION = create_GESTION_ELECTION ();
-  gtk_widget_show (GESTION_ELECTION);
-  GESTION_BV = create_GESTION_BV ();
-  gtk_widget_show (GESTION_BV);
-  MODIF_LISTE = create_MODIF_LISTE ();
-  gtk_widget_show (MODIF_LISTE);
-  MODIF_USER = create_MODIF_USER ();
-  gtk_widget_show (MODIF_USER);
-  MODIF_OBSERV = create_MODIF_OBSERV ();
-  gtk_widget_show (MODIF_OBSERV);
-  MODIF_ELECTION = create_MODIF_ELECTION ();
-  gtk_widget_show (MODIF_ELECTION);
-  MODIFER_BV = create_MODIFER_BV ();
-  gtk_widget_show (MODIFER_BV);
-
+  
   gtk_main ();
   return 0;
 }
